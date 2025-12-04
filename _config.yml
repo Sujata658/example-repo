@@ -23,7 +23,7 @@ collections:
     permalink: /news/:year/:month/:day/:title.html
     scraping:
     - title: Honda
-      recurrence: "*/30 * * * *" # every thirty minutes
+      recurrence: "*/1 * * * *" # every thirty minutes
       source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
       selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
       times_generated: 7
