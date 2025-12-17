@@ -43,7 +43,7 @@ collections:
         selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
         recurrence: "*/1 * * * *"
         times_generated: 7
-        repo_id: "vkl5ly7jl6mmt28"
+        repo_id: "qdznwif6qw64byj"
 
 
 
