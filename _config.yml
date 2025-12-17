@@ -21,14 +21,6 @@ collections:
     permalink: "/news/:year/:month/:day/:title.html"
     scraping: 
       - 
-        title: "Honda"
-        user_prompt: "some prompt"
-        source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
-        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
-        recurrence: "*/1 * * * *"
-        repo_id: "zuslxasfw3sgqtm"
-
-      - 
         title: "Honda2"
         user_prompt: "some prompt"
         source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
