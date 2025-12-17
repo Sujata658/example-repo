@@ -21,11 +21,11 @@ collections:
     permalink: "/news/:year/:month/:day/:title.html"
     scraping: 
     - title: Honda
-        recurrence: "*/1 * * * *" # every thirty minutes
-        source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
-        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
-        times_generated: 7
-        user_prompt: |-
+      recurrence: "*/1 * * * *" # every thirty minutes
+      source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
+      selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
+      times_generated: 7
+      user_prompt: |-
           Erstelle eine News unter folgenden Parametern:
            - Ausgabe immer in deutscher Sprache
            - Gestaltung der erzeugten News immer mit diesen Text-Elementen:
