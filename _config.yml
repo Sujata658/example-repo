@@ -1,115 +1,174 @@
----
-google_analytics: G-XXXXXXXXXX
-facebook_analytics: XXXXXXXXXX
+google_analytics: "G-XXXXXXXXXX"
+facebook_analytics: "XXXXXXXXXX"
 pwa: true
-google_fonts:
-  - Fira Sans
+google_fonts: 
+  - "Fira Sans"
 
-title: Mototipp
-description: Bei mototipp.de gibt's News rund ums motorisierte Zweirad. Immer aktuell, immer hochwertig, stets interessant. Vorbeischauen lohnt!
-url: https://mototipp.de
+title: "Mototipp"
+description: "Bei mototipp.de gibt's News rund ums motorisierte Zweirad. Immer aktuell, immer hochwertig, stets interessant. Vorbeischauen lohnt!"
+url: "https://mototipp.de"
 baseurl: ""
-
 future: true
+collections: 
+  pages: 
+    title: "Pages"
+    output: true
+    permalink: "/:title"
 
-collections:
-  pages:
-    title: Pages
+  posts: 
+    title: "Posts"
     output: true
-    permalink: /:title
-  posts:
-    title: Posts
+    permalink: "/news/:year/:month/:day/:title.html"
+    scraping: 
+      - 
+        title: "Honda"
+        recurrence: "*/1 * * * *"
+        source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
+        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
+        times_generated: 7
+        user_prompt: "Erstelle eine News unter folgenden Parametern:
+- Ausgabe immer in deutscher Sprache
+- Gestaltung der erzeugten News immer mit diesen Text-Elementen:
++ Überschrift
++ kurzer, prägnanter Vorspann
++ Texthauptteil als Fließtext inklusive passender Zitate aus der Originalquelle sowie mit Quellennennung durch Textkonstruktionen wie \"nach Angaben von\", \"wie XY mitteilt\" etc.
++ Fazit mit den Kernaussagen aus dem Text in Bulletpoints
+- zwingender Verzicht auf werbliche Aussagen bzw. auf die ungeprüfte Übernahme werblicher Aussagen aus der Quelle"
+
+
+
+  stories: 
+    title: "Stories"
+    permalink: "/stories/:year/:month/:day/:title.html"
     output: true
-    permalink: /news/:year/:month/:day/:title.html
-    scraping:
-    - title: Honda
-      recurrence: "*/1 * * * *" # every thirty minutes
-      source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
-      selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
-      times_generated: 7
-      user_prompt: |-
-        Erstelle eine News unter folgenden Parametern:
-        - Ausgabe immer in deutscher Sprache
-        - Gestaltung der erzeugten News immer mit diesen Text-Elementen:
-        + Überschrift
-        + kurzer, prägnanter Vorspann
-        + Texthauptteil als Fließtext inklusive passender Zitate aus der Originalquelle sowie mit Quellennennung durch Textkonstruktionen wie "nach Angaben von", "wie XY mitteilt" etc.
-        + Fazit mit den Kernaussagen aus dem Text in Bulletpoints
-        - zwingender Verzicht auf werbliche Aussagen bzw. auf die ungeprüfte Übernahme werblicher Aussagen aus der Quelle
-   
-  stories:
-    title: Stories
-    permalink: /stories/:year/:month/:day/:title.html
+
+  tipps: 
+    title: "Tipps"
     output: true
-  tipps:
-    title: Tipps
+    permalink: "/tipps/:title"
+
+  companies: 
+    title: "Companies"
     output: true
-    permalink: /tipps/:title
-  companies:
-    title: Companies
+    permalink: "/firmen/:title"
+
+  authors: 
+    title: "Authors"
     output: true
-    permalink: /firmen/:title
-  authors:
-    title: Authors
+    permalink: "/autoren/:title"
+
+  categories: 
+    title: "Rubriken"
     output: true
-    permalink: /autoren/:title
-  categories:
-    title: Rubriken
-    output: true
-    permalink: /:title
-  aside:
-    title: Aside
+    permalink: "/:title"
+
+  aside: 
+    title: "Aside"
     output: false
-  events:
-    title: Events
+
+  events: 
+    title: "Events"
     output: true
-    permalink: /events/:year/:month/:title.html
-defaults:
-  - scope:
+    permalink: "/events/:year/:month/:title.html"
+
+  articles: 
+    scraping: 
+      - 
+        title: "Honda"
+        user_prompt: "Erstelle eine News unter folgenden Parametern:
+- Ausgabe immer in deutscher Sprache
+- Gestaltung der erzeugten News immer mit diesen Text-Elementen:
++ Überschrift
++ kurzer, prägnanter Vorspann
++ Texthauptteil als Fließtext inklusive passender Zitate aus der Originalquelle sowie mit Quellennennung durch Textkonstruktionen wie \"nach Angaben von\", \"wie XY mitteilt\" etc.
++ Fazit mit den Kernaussagen aus dem Text in Bulletpoints
+- zwingender Verzicht auf werbliche Aussagen bzw. auf die ungeprüfte Übernahme werblicher Aussagen aus der Quelle"
+        source: ""
+        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
+        recurrence: "*/1 * * * *"
+        base_url: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
+        domain: "www.honda.de"
+        times_generated: 7
+        filter: ""
+        repo_id: "eqi5dkt38fyiov1"
+        dynamic_content: false
+
+
+
+
+defaults: 
+  - 
+    scope: 
       path: ""
-      type: posts
-    values:
-      layout: post
-      description:
-      author: Stephan Krückel
+      type: "posts"
+
+    values: 
+      layout: "post"
+      description: null
+      author: "Stephan Krückel"
       issponsored: false
-      sponsor:
-        - company: Firma
-          link: http://website.com
+      sponsor: 
+        - 
+          company: "Firma"
+          link: "http://website.com"
           image: "/uploads/sample.jpg"
-      _inputs:
-        description:
-          type: textarea
-        gallery[*].image:
-          type: image
-        author:
-          type: select
-          options:
-            values: collections.authors
-  - scope:
+
+
+      _inputs: 
+        description: 
+          type: "textarea"
+
+        gallery[*].image: 
+          type: "image"
+
+        author: 
+          type: "select"
+          options: 
+            values: "collections.authors"
+
+
+
+
+
+  - 
+    scope: 
       path: ""
-      type: companies
-    values:
-      layout: company
-      # permalink: "/news/:categories/:year/:month/:day/:title.html"
-      description:
-      gallery:
-        - image: "/uploads/sample.jpg"
-          alt: Bildbeschreibung
-          copyright:
-      _inputs:
-        description:
-          type: textarea
-        gallery[*].image:
-          type: image
-  - scope:
+      type: "companies"
+
+    values: 
+      layout: "company"
+      description: null
+      gallery: 
+        - 
+          image: "/uploads/sample.jpg"
+          alt: "Bildbeschreibung"
+          copyright: null
+
+
+      _inputs: 
+        description: 
+          type: "textarea"
+
+        gallery[*].image: 
+          type: "image"
+
+
+
+
+  - 
+    scope: 
       path: ""
-      type: authors
-    values:
-      title:
-      description:
-      _inputs:
-        description:
-          type: textarea
+      type: "authors"
+
+    values: 
+      title: null
+      description: null
+      _inputs: 
+        description: 
+          type: "textarea"
+
+
+
+
 
 cloudinary_image_base: "https://res.cloudinary.com/mototipp/image/upload"
