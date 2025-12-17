@@ -26,7 +26,7 @@ collections:
         source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
         selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
         recurrence: "*/3 * * * *"
-        repo_id: "2njm4uwyletekn1"
+        repo_id: "wvvp88zlaxlrmre"
 
       - 
         title: "Honda3"
