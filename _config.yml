@@ -20,6 +20,14 @@ collections:
     output: true
     permalink: "/news/:year/:month/:day/:title.html"
     scraping: 
+      - 
+        title: "Honda"
+        user_prompt: "some prompt"
+        source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
+        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
+        recurrence: "*/2 * * * *"
+        repo_id: "pockogalimugpja"
+
 
 
   stories: 
