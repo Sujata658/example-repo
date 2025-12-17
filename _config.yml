@@ -26,14 +26,7 @@ collections:
         source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
         selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
         times_generated: 7
-        user_prompt: "Erstelle eine News unter folgenden Parametern:
-- Ausgabe immer in deutscher Sprache
-- Gestaltung der erzeugten News immer mit diesen Text-Elementen:
-+ Überschrift
-+ kurzer, prägnanter Vorspann
-+ Texthauptteil als Fließtext inklusive passender Zitate aus der Originalquelle sowie mit Quellennennung durch Textkonstruktionen wie \"nach Angaben von\", \"wie XY mitteilt\" etc.
-+ Fazit mit den Kernaussagen aus dem Text in Bulletpoints
-- zwingender Verzicht auf werbliche Aussagen bzw. auf die ungeprüfte Übernahme werblicher Aussagen aus der Quelle"
+        user_prompt: "Erstelle eine News unter folgenden Parametern: - Ausgabe immer in deutscher Sprache - Gestaltung der erzeugten News immer mit diesen Text-Elementen: + Überschrift + kurzer, prägnanter Vorspann + Texthauptteil als Fließtext inklusive passender Zitate aus der Originalquelle sowie mit Quellennennung durch Textkonstruktionen wie \"nach Angaben von\", \"wie XY mitteilt\" etc. + Fazit mit den Kernaussagen aus dem Text in Bulletpoints - zwingender Verzicht auf werbliche Aussagen bzw. auf die ungeprüfte Übernahme werblicher Aussagen aus der Quelle"
 
 
 
@@ -73,26 +66,6 @@ collections:
 
   articles: 
     scraping: 
-      - 
-        title: "Honda"
-        user_prompt: "Erstelle eine News unter folgenden Parametern:
-- Ausgabe immer in deutscher Sprache
-- Gestaltung der erzeugten News immer mit diesen Text-Elementen:
-+ Überschrift
-+ kurzer, prägnanter Vorspann
-+ Texthauptteil als Fließtext inklusive passender Zitate aus der Originalquelle sowie mit Quellennennung durch Textkonstruktionen wie \"nach Angaben von\", \"wie XY mitteilt\" etc.
-+ Fazit mit den Kernaussagen aus dem Text in Bulletpoints
-- zwingender Verzicht auf werbliche Aussagen bzw. auf die ungeprüfte Übernahme werblicher Aussagen aus der Quelle"
-        source: ""
-        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
-        recurrence: "*/1 * * * *"
-        base_url: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
-        domain: "www.honda.de"
-        times_generated: 7
-        filter: ""
-        repo_id: "eqi5dkt38fyiov1"
-        dynamic_content: false
-
 
 
 
