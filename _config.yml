@@ -44,7 +44,6 @@ collections:
         recurrence: "*/9 * * * *"
         repo_id: "qojyurb3paw56is"
 
-
   stories: 
     title: "Stories"
     permalink: "/stories/:year/:month/:day/:title.html"
