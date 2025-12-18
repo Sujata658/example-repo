@@ -25,7 +25,7 @@ collections:
         user_prompt: "some prompt"
         source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
         selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
-        recurrence: "*/9 * * * *"
+        recurrence: "*/8 * * * *"
         repo_id: "qojyurb3paw56is"
 
       - 
