@@ -37,15 +37,7 @@ collections:
         repo_id: "wvvp88zlaxlrmre"
 
       - 
-        title: "Honda7"
-        user_prompt: "some prompt"
-        source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
-        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
-        recurrence: "*/6 * * * *"
-        repo_id: "wvvp88zlaxlrmre"
-
-      - 
-        title: "Honda5"
+        title: "Honda8"
         user_prompt: "some prompt"
         source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
         selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
