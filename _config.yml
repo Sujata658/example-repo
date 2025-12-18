@@ -52,8 +52,6 @@ collections:
         recurrence: "*/6 * * * *"
         repo_id: "qicozkvnindzdy6"
 
-      
-
       - 
         title: "Honda100"
         user_prompt: "some prompt"
