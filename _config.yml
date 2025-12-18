@@ -53,6 +53,7 @@ collections:
         repo_id: "qicozkvnindzdy6"
 
 
+
   stories: 
     title: "Stories"
     permalink: "/stories/:year/:month/:day/:title.html"
