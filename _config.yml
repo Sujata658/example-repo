@@ -55,6 +55,7 @@ collections:
 
 
 
+
   stories: 
     title: "Stories"
     permalink: "/stories/:year/:month/:day/:title.html"
