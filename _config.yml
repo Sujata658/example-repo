@@ -28,7 +28,6 @@ collections:
         recurrence: "*/8 * * * *"
         repo_id: "qojyurb3paw56is"
         
-
       - 
         title: "Honda"
         user_prompt: "some prompt"
