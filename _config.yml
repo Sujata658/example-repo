@@ -44,6 +44,14 @@ collections:
         recurrence: "*/9 * * * *"
         repo_id: "6p8r3mksus412ee"
 
+      - 
+        title: "Honda4"
+        user_prompt: "some prompt"
+        source: "https://www.honda.de/motorcycles/experience-honda/news-and-events.html"
+        selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
+        recurrence: "*/7 * * * *"
+        repo_id: "6p8r3mksus412ee"
+
 
 
   stories: 
