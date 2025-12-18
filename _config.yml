@@ -35,7 +35,6 @@ collections:
         selector: ".gs.deskTwoQuarters.tabTwoThirds h3 > a"
         recurrence: "*/9 * * * *"
         repo_id: "qojyurb3paw56is"
-
       - 
         title: "Honda3"
         user_prompt: "some prompt"
