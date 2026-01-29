@@ -22,7 +22,7 @@ jobs:
           workspace-name: issue-${{ github.event.issue.number }}
           parameters: |
             IssueNumber: "${{ github.event.issue.number }}"
-            IssueTitle: "issue title"
-            IssueBody: "issue body"
+            IssueTitle: "${{ github.event.issue.title }}"
+            IssueBody: "${{ github.event.issue.body }}"
             RepoURL: "https://github.com/${{ github.repository }}"
           github-username: ${{ github.actor }}  # Maps to Coder user
