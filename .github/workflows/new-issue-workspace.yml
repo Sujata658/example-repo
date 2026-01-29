@@ -1,27 +1,21 @@
 name: Start Coder Workspace on New Issue
-
 on:
   issues:
     types: [opened]
-
 permissions:
   issues: write
-
 jobs:
   start-workspace:
     runs-on: ubuntu-latest
-    environment: coder-production  # Optional: Protects secrets
     steps:
-      - name: Start workspace
-        uses: coder/start-workspace-action@v0.1.0  # Check latest version
+      - uses: coder/start-workspace-action@v0.1.0
         with:
           coder-url: ${{ secrets.CODER_URL }}
           coder-token: ${{ secrets.CODER_TOKEN }}
           template-name: ${{ secrets.CODER_TEMPLATE_NAME }}
-          workspace-name: issue-${{ github.event.issue.number }}
+          workspace-name: "issue-${{ github.event.issue.number }}"
           parameters: |-
-            IssueNumber: ${{ github.event.issue.number }}
+            IssueNumber: "${{ github.event.issue.number }}"
             IssueTitle: "${{ github.event.issue.title }}"
             IssueBody: "${{ github.event.issue.body }}"
-            RepoURL: https://github.com/${{ github.repository }}
-          github-username: ${{ github.actor }}  # Maps to Coder user
+            RepoURL: "https://github.com/${{ github.repository }}"
