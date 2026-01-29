@@ -67,7 +67,7 @@ jobs:
           parameters: |-
 
 
-            IssueNumber: ${{ github.event.issue.number }}
+            IssueNumber: "${{ github.event.issue.number }}"
 
 
             IssueTitle: "${{ github.event.issue.title }}"
